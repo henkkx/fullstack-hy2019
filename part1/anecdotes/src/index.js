@@ -10,7 +10,7 @@ const Button = ({ handleClick, text }) => {
 
 const App = (props) => {
     const [selected, setSelected] = useState(0)
-    const [votes, setVotes] = useState(Array(props.anecdotes.length).fill(0))
+    const [votes, setVotes] = useState(Array(anecdotes.length).fill(0))
 
     /**
      * random int between min (incl.),  max (excl.)
@@ -41,7 +41,7 @@ const App = (props) => {
             <Button handleClick={() => newAnecdote()} text='next anecdote' />
             <Button handleClick={() => vote()} text='vote' />
             <h1>Anecdote with most votes</h1>
-            <p>{props.anecdotes[findMostVotesIndex()]}</p>
+            <p>{anecdotes[findMostVotesIndex()]}</p>
             <p>has {votes[findMostVotesIndex()]} votes</p>
 
         </div>
